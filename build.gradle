@@ -18,6 +18,11 @@ configurations {
 	}
 }
 
+println "gpr.user=" + project.findProperty('gpr.user')
+println "System.USERNAME=" + System.getenv("USERNAME")
+println "gpr.key =" + project.findProperty('gpr.key')
+println "System.Token =" + System.getenv("TOKEN")
+
 repositories {
 	maven {
 		url = uri("https://maven.pkg.github.com/chemical-line/libtest")
