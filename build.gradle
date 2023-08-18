@@ -23,7 +23,7 @@ repositories {
 		url = uri("https://maven.pkg.github.com/chemical-line/libtest")
 		credentials {
 			username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-			password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+			password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
 		}
 	}
 	mavenCentral()
@@ -36,7 +36,7 @@ publishing {
 			url = uri("https://maven.pkg.github.com/chemical-line/try-github-action")
 			credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+                password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
 			}
 		}
     }
